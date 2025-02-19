@@ -6,8 +6,11 @@ interface NotificationScreen { }
 const NotificationScreen = () => {
     return (
         <SafeAreaView style={{ flex: 1 }}>
-            <View style={styles.container}>
-                <Text style={{ color: '#f2f2f2' }}>Notification</Text>
+            <View style={styles.topContainer}>
+                <Text style={styles.title}>Notification</Text>
+            </View>
+            <View style={styles.bodyContainer}>
+
             </View>
         </SafeAreaView>
     );
@@ -16,9 +19,20 @@ const NotificationScreen = () => {
 export default NotificationScreen;
 
 const styles = StyleSheet.create({
-    container: {
+    topContainer: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+
+        borderBottomColor: '#3f3f3f',
+        borderBottomWidth: 1
+    },
+    bodyContainer: {
+        flex: 10,
+    },
+
+    title: {
+        fontSize: 25,
+        color: 'white'
     }
 });
